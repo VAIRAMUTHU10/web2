@@ -1,0 +1,81 @@
+/* Web Font */
+* {
+    font-family: 'Titillium Web', sans-serif; 
+    
+}
+
+/* Relative positioning*/
+#image-map {
+    position: relative;
+    margin: 150px auto 20px auto;
+}
+
+/* Hide the original tooltips contents */
+.pin {
+    display: none;
+    color:#ffdb90;
+}
+
+/* Begin styling the tooltips and pins */
+.tooltip-up, .tooltip-down {
+    position: absolute;
+   
+    width: 25px;
+    height: 37px;
+}
+
+.tooltip-down {
+    background-position: 0 -37px;
+}
+
+.tooltip {
+    display: none;
+    width: 200px;
+    cursor: help;
+    text-shadow: 0 1px 0 #fff;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    z-index: 999;
+    margin-left: -115px;
+    padding:15px;
+    color: #222;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 rgba(0,0,0,.7);
+    background: #fff1d3;
+    background: linear-gradient(top, #fff1d3, #ffdb90);         
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -10px;
+    border-bottom: 10px solid #fff1d3;
+    border-left: 10px solid transparent;
+    border-right : 10px solid transparent;
+}
+
+.tooltip-down .tooltip {
+    bottom: 12px;
+    top: auto;
+}
+
+.tooltip-down .tooltip::after {
+    bottom: -10px;
+    top: auto;
+    border-bottom: 0;
+    border-top: 10px solid #ffdb90;
+}
+
+.tooltip h2 {
+    font: bold 1.3em 'Trebuchet MS', Tahoma, Arial;
+    margin: 0 0 10px;
+}
+
+.tooltip ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
